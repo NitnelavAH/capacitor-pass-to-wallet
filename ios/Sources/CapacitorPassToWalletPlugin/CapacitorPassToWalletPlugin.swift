@@ -7,7 +7,13 @@ import PassKit
  * here: https://capacitorjs.com/docs/plugins/ios
  */
 @objc(CapacitorPassToWalletPlugin)
-public class CapacitorPassToWalletPlugin: CAPPlugin {
+public class CapacitorPassToWalletPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "CapacitorPassToWalletPlugin"
+    public let jsName = "CapacitorPassToWallet"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "addToWallet", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "addMultipleToWallet", returnType: CAPPluginReturnPromise)
+    ]
     private let implementation = CapacitorPassToWallet()
 
     @objc func addToWallet(_ call: CAPPluginCall) {

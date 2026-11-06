@@ -8,13 +8,14 @@ https://github.com/NitnelavAH/IonicAdd2Wallet
 
 ## Compatibility
 
-| Capacitor Version  | Plugin Version |
-| ------------- | ------------- |
-| 4.x  | 1.x  |
-| 5.x  | 2.x |
-| 6.x  | 3.x |
-| 7.x  | 4.x |
-| 8.x  | 5.x |
+| Capacitor Version | Plugin Version | iOS dependency manager                  |
+| ----------------- | -------------- | --------------------------------------- |
+| 4.x               | 1.x            | CocoaPods                               |
+| 5.x               | 2.x            | CocoaPods                               |
+| 6.x               | 3.x            | CocoaPods                               |
+| 7.x               | 4.x            | CocoaPods                               |
+| 8.x               | 5.0.x          | CocoaPods                               |
+| 8.x               | 5.1.x+         | Swift Package Manager (SPM) or CocoaPods |
 
 ## Install
 
@@ -22,6 +23,12 @@ https://github.com/NitnelavAH/IonicAdd2Wallet
 npm install capacitor-pass-to-wallet
 npx cap sync
 ```
+
+### iOS
+
+- Requires iOS 15+ and Capacitor 8.
+- Starting with **5.1.0**, the plugin supports both **Swift Package Manager (SPM)** projects (e.g. created with `npx cap add ios --packagemanager SPM`) and **CocoaPods** projects.
+- Version **5.0.x** only supports **CocoaPods**. If your app uses SPM, upgrade to `^5.1.0`.
 
 ## API
 
